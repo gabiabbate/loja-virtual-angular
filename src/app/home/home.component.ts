@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-menu',
-  templateUrl:'./menu.component.html',
+  selector: 'app-home',
+  templateUrl:'./home.component.html',
   styles: [
   ]
 })
@@ -11,4 +11,3 @@ export class FooterComponent {
   constructor() { }
 
 }
-
