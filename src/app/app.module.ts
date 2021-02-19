@@ -7,6 +7,10 @@ import { MenuComponent } from './navegacao/menu/menu.component';
 import { HomeComponent } from './navegacao/home/home.component';
 import { SobreComponent } from './institucional/sobre/sobre.component';
 import { ContatoComponent } from './institucional/contato/contato.component';
+import { RouterModule } from '@angular/router';
+import { rooteRouterConfig } from './app.route';
+import { APP_BASE_HREF } from '@angular/common';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -18,9 +22,12 @@ import { ContatoComponent } from './institucional/contato/contato.component';
     ContatoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    [RouterModule.forRoot(rooteRouterConfig, { useHash: false})]
   ],
-  providers: [],
+  providers: [
+    { provide: APP_BASE_HREF, useValue: '/'}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
