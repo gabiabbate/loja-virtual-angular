@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-contato',
+  selector: 'app-sobre',
   templateUrl:'/sobre.component.html',
   styles: [
   ]
